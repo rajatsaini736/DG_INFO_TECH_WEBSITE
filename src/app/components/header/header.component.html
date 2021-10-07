@@ -1,0 +1,46 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid rounded pad-navbar">
+
+        <a routerLink="/home" class="navbar-brand"><img src="../../../assets/img/logo1.png" alt="" style="width: 60px;"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-2" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/home">Home</a>
+                </li>
+                <li class="nav-item px-2" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/services">Services</a>
+                </li>
+                <li class="nav-item border-right border-light mt-2 old-border">
+                    <a class="nav-link"></a>
+                </li>
+                <li class="nav-item border-bottom border-light new-border">
+                    <a class="nav-link"></a>
+                </li>
+            </ul>
+            <!-- <div class="border"></div> -->
+            <ul class="navbar-nav">
+                <li class="nav-item px-2" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/about-us">About Us</a>
+                </li>
+                <li class="nav-item px-2" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <div class="row px-2">
+                    <div class="col-md-4 mt-2 ">
+                        <button routerLink="/career" class="btn btn-match rounded">Career</button>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+</nav>

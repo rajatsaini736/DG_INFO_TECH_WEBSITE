@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', 'sans-serif';
+}
+.main-header{
+    height: 50vh;
+}
+.btn-match{
+    color: white;
+    background-color:#FBBA00;
+    border-color:#FBBA00;
+}
+.footer-menu-link{
+    color: black;
+    font-size: 15px;
+}
+.footer-menu-link:hover{
+    color: #b68500;
+}
