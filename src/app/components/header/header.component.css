@@ -1,0 +1,23 @@
+.navbar .pad-navbar{
+    transition: all 0.5s ease-in-out;
+}
+.btn-match{
+    color: white;
+    background-color:#FBBA00;
+    border-color:#FBBA00;
+}
+.new-border{
+    display: none;
+}
+.old-border{
+    display: block;
+}
+
+@media only screen and (max-width: 992px) {
+    .new-border{
+        display: block;
+    }
+    .old-border{
+        display: none;
+    }
+}

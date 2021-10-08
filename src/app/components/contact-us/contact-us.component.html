@@ -1,0 +1,183 @@
+<div class="main-header pt-5 aqua-gradient d-flex align-items-center">
+    <div class="container">
+        <h1 class="text-center animated bounce text-white display-4">Contact Us</h1>
+    </div>
+</div>
+
+<!-- ####################           CONTACT FORM           #####################  -->
+<div class="bg-light">
+    <div class="container py-5">
+        <div class="lead text-center">Any question or remarks? Just write us a message!</div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-danger" [hidden]="!error">
+                    {{ errMessage }}
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-success" [hidden]="!success">
+                    {{ errMessage }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3 bg-white">
+            <div class="col-md-4 rounded contact-class">
+                <div class="container p-4">
+                    <div class="row text-white">
+                        <h4>Contact Information</h4>
+                    </div>
+                    <div class="row text-white">
+                        <div class="font-weight-light">Fill up the form and our team will get back to you within 24 hours.</div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-1">
+                            <span><i class="fa fa-phone" aria-hidden="true" style="font-size: 20px; color: #FBBA00;"></i></span>
+                        </div>
+                        <div class="col-10"><a class="text-white" href="tel:+919116755039">+91 91167 55039</a></div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-1">
+                            <span><i class="fa fa-envelope-square" aria-hidden="true" style="font-size: 20px; color: #FBBA00;"></i></span>
+                        </div>
+                        <div class="col-10"><a class="text-white"  href="mailto:infodginfotechindia@gmail.com">infodginfotechindia@gmail.com</a></div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-1">
+                            <span><i class="fa fa-map-pin" aria-hidden="true" style="font-size: 20px; color: #FBBA00;"></i></span>
+                        </div>
+                        <div class="col-10 text-white">510, Jaipur Centre, Jaipur (Raj.), India</div>
+                    </div>
+                    <div class="row  text-center py-3">
+                        <span class="px-2">
+                            <a href="https://www.facebook.com/dginfotechindia"><i class="fab fa-facebook-square p-2 rounded" style="background-color: white; color: blue;"></i></a>
+                        </span>
+                        <span class="px-2">
+                            <a href="https://www.linkedin.com/company/dg-infotech-1/?viewAsMember=true"><i class="fab fa-linkedin p-2 rounded" style="background-color: white; color: darkcyan;"></i></a>
+                        </span>
+                        <span class="px-2">
+                            <a href="https://www.instagram.com/infotechdg/"><i class="fab fa-instagram-square p-2 rounded" style="background-color: white; color: red;"></i></a>
+                        </span>
+                        <span class="px-2">
+                            <a href="https://twitter.com/InfotechDg"><i class="fab fa-twitter-square p-2 rounded" style="background-color: white; color: rgb(0, 200, 207);"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="container p-3">
+        
+                    <form #myForm="ngForm" (ngSubmit)="sendMail(); myForm.reset();" enctype="multipart/form-data" novalidate>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="firstName" 
+                                    id="firstName"
+                                    placeholder="John"
+                                    [(ngModel)] = "firstName"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="lastName"
+                                    id="lastName"
+                                    placeholder="Doe"
+                                    [(ngModel)] = "lastName"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="mail">Mail</label>
+                                <input type="email" 
+                                    class="form-control"
+                                    name="mail" 
+                                    id="mail"
+                                    placeholder="abc@example.com"
+                                    [(ngModel)] = "mail"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="text">Number</label>
+                                <input type="number" 
+                                    class="form-control"
+                                    name="number" 
+                                    id="number"
+                                    placeholder="+1 1234567890"
+                                    [(ngModel)] = "number"
+                                    required>
+                            </div>
+                        </div>
+                        <label for="type">What type of service do you need?</label>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" 
+                                    class="form-check-input"
+                                    name="radioOption1" 
+                                    id="radioOption1"
+                                    value="App Development"
+                                    [(ngModel)]="appDevelopmentCheck"
+                                    >
+                                <label class="form-check-label" for="radioOption1">App Development </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" 
+                                    class="form-check-input"
+                                    name="radioOption2" 
+                                    id="radioOption2"
+                                    value="Web Development"
+                                    [(ngModel)]="webDevelopmentCheck" 
+                                    >
+                                <label class="form-check-label" for="radioOption2">Web Development</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" 
+                                    class="form-check-input"
+                                    name="radioOption3" 
+                                    id="radioOption3"
+                                    value="Game Developement"
+                                    [(ngModel)]="gameDevelopmentCheck"
+                                    >
+                                <label class="form-check-label" for="radioOption3">Game Development</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" 
+                                    class="form-check-input"
+                                    name="radioOption4" 
+                                    id="radioOption4"
+                                    value="Designing"
+                                    [(ngModel)]="designCheck"
+                                    >
+                                <label class="form-check-label" for="radioOption4">Designing</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text"
+                                class="form-control"    
+                                name="message" 
+                                id="message"
+                                placeholder="Write your message"
+                                [(ngModel)] = "message"
+                                required>
+                        </div>
+                        <div class="text-right">
+                        <button class="btn text-white" style="background-color:#FBBA00"  [disabled]="!myForm.form.valid" >Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ####################           MAP           #####################  -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" id="map" name="map">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
